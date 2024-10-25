@@ -93,6 +93,8 @@ public class Main {
         list.sort((entry1, entry2) -> entry2.getValue().compareTo(entry1.getValue()));
 
         // Print informations in order
+        System.out.println();
+        System.out.println("Rentabilidades Mensais em ordem descrescente:");
         for ( Map.Entry<String, Double> month : list) {
             System.out.println(month.getKey() + ":" + month.getValue());
         }
