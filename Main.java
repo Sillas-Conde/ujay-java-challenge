@@ -11,6 +11,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
+import java.util.Scanner;
 import src.MonthReturns;
 
 public class Main {
@@ -23,7 +24,12 @@ public class Main {
         DateTimeFormatter fmtMonth = DateTimeFormatter.ofPattern("MM/yyyy");
 
         // URL variables
-        String urlString = "https://ujay.eastus.cloudapp.azure.com/rentabilidades.txt";
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Insira a URL de consulta:");
+        String urlString = sc.next();
+        sc.close();        
+        
         URL url;
         BufferedReader content;
 
